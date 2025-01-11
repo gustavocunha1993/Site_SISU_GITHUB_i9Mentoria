@@ -151,12 +151,12 @@ strong {
 }
 
 .aprovado {
-    color: #9083fa; /* Cor de aprovação */
+    color: #04a63a; /* Cor de aprovação */
     font-weight: bold;
 }
 
 .nao-aprovado {
-    color: #747dfa; /* Cor de não aprovação */
+    color: #f90808; /* Cor de não aprovação */
     font-weight: bold;
 }
 
