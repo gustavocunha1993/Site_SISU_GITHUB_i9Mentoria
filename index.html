@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Aprovação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="myfoto.PNG" alt="Additional Logo" class="img">
+        <h1>Microdados do ENEM 2023: Acertos ENEM 2024 para Ampla Concorrência</h1>
+        <img src="LogoGC.png" alt="Logo" class="logo-direita">
+    </header>
+
+    <main>
+        <section id="acertos-section"> <!--Area da quantidade de acertos em cada área-->
+            <h2>Informe seus Acertos</h2>
+            <p>
+                Escreva aqui a quantidade de acertos que você obteve em cada área do ENEM 2024. 
+                Coloque a nota da Redação que você tirava nos simulados!    
+            </p>
+            <form id="acertos-form" onsubmit="return false;">
+                <div>
+                    <label for="linguagens-acertos">Acertos em Linguagens:</label>
+                    <input type="number" id="linguagens-acertos" min="0" max="45" required>
+                </div>
+                <div>
+                    <label for="humanidades-acertos">Acertos em Humanidades:</label>
+                    <input type="number" id="humanidades-acertos" min="0" max="45" required>
+                </div>
+                <div>
+                    <label for="natureza-acertos">Acertos em Natureza:</label>
+                    <input type="number" id="natureza-acertos" min="0" max="45" required>
+                </div>
+                <div>
+                    <label for="matematica-acertos">Acertos em Matemática:</label>
+                    <input type="number" id="matematica-acertos" min="0" max="45" required>
+                </div>
+                <div>
+                    <label for="redacao-nota">Nota esperada na Redação:</label>
+                    <input type="number" id="redacao-nota" min="0" max="1000" required>
+                </div>
+                <button type="button" onclick="gerarNotas()">Gerar Notas Possíveis</button> <!--Criou o botão -->
+            </form>
+        </section>
+
+        <section id="notas-section" style="display: none;">
+            <h2>Selecione suas Notas</h2>
+            <p>
+                A Teoria de Resposta ao Item no ENEM 2023 produziu diversas notas baseadas na quantidade de acertos. 
+                Assim, temos a menor, a maior e uma nota média possíveis. 
+                Para facilitar o cálculo dos seus resultados de diferentes maneiras, oferecemos a flexibilidade de 
+                escolher entre essas três opções ou até mesmo inserir uma nota estimada por você.
+            </p>
+            <!-- Seleção de Notas para Linguagens -->
+            <div>
+                <label for="linguagens-nota">Nota em Linguagens:</label>
+                <select id="linguagens-nota">
+                    <option value="min">Nota Mínima</option>
+                    <option value="media">Nota Média</option>
+                    <option value="max">Nota Máxima</option>
+                    <option value="custom">Inserir Nota</option>
+                </select>
+                <input type="number" id="linguagens-custom" style="display: none;" placeholder="Insira a nota">
+            </div>
+        
+            <!-- Seleção de Notas para Humanidades -->
+            <div>
+                <label for="humanidades-nota">Nota em Humanidades:</label>
+                <select id="humanidades-nota">
+                    <option value="min">Nota Mínima</option>
+                    <option value="media">Nota Média</option>
+                    <option value="max">Nota Máxima</option>
+                    <option value="custom">Inserir Nota</option>
+                </select>
+                <input type="number" id="humanidades-custom" style="display: none;" placeholder="Insira a nota">
+            </div>
+        
+            <!-- Seleção de Notas para Natureza -->
+            <div>
+                <label for="natureza-nota">Nota em Natureza:</label>
+                <select id="natureza-nota">
+                    <option value="min">Nota Mínima</option>
+                    <option value="media">Nota Média</option>
+                    <option value="max">Nota Máxima</option>
+                    <option value="custom">Inserir Nota</option>
+                </select>
+                <input type="number" id="natureza-custom" style="display: none;" placeholder="Insira a nota">
+            </div>
+        
+            <!-- Seleção de Notas para Matemática -->
+            <div>
+                <label for="matematica-nota">Nota em Matemática:</label>
+                <select id="matematica-nota">
+                    <option value="min">Nota Mínima</option>
+                    <option value="media">Nota Média</option>
+                    <option value="max">Nota Máxima</option>
+                    <option value="custom">Inserir Nota</option>
+                </select>
+                <input type="number" id="matematica-custom" style="display: none;" placeholder="Insira a nota">
+            </div>
+        
+            <button type="button" onclick="calcularAprovacao()">Verificar Aprovação</button>
+        </section>
+
+        <section id="resultado-section" style="display: none;">
+            <h2>Resultado</h2>
+            <p>
+                Você está visualizando sua nota, a nota de corte, o número de vagas para ampla concorrência e os pesos, 
+                organizados na seguinte ordem para cada área: L (Linguagens), H (Humanidades), N (Natureza), 
+                M (Matemática) e R (Redação)
+            </p>
+            <ul id="resultado"></ul> <!--mostra o resultado exibido-->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <div id="resultado-section" style="display: none;">
+        <ul id="resultado"></ul>
+</body>
+</html>
