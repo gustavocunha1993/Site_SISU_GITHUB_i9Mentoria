@@ -1,740 +1,1249 @@
 const faculdades = [
+    // a partir de agora está com as coisas do Allan.
     
-    { 
+    {
+        nome: 'UNDF',
+        notaCorte: 787.08,
+        vagas: 48,
+        pesos: { redacao: 2, natureza: 4, humanidades: 2, linguagens: 4, matematica: 3 },
+        pesos_numeros: [2, 2, 4, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 4 + 2 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 48 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 793,32 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 22 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 784,81<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787,08"
+    },
+
+ {
+        nome: 'UFMG',
+        notaCorte: 813.1,
+        vagas: 160,
+        pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 160 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 812.80<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 50 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 808,07<br><br>"+
+        "<u><b>3ª Ch. AC:</u></b> 16 candidatos<br>"+
+        "Corte 3ª Ch AC</u>: 804,78<br><br>"+
+        "<u><b>4ª Ch. AC:</u></b> 12 candidatos<br>"+
+        "Corte 4ª Ch AC</u>: 802,70<br><br>"+
+        "<u><b>5ª Ch. AC:</u></b> 4 candidatos<br>"+
+        "Corte 5ª Ch AC</u>: 802,10<br><br>"+
+        "<u><b>6ª Ch. AC:</u></b> 14 candidatos<br>"+
+        "Corte 6ª Ch AC</u>: 799,76<br><br>"+
+        "<u><b>7ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 7ª Ch AC</u>: 799,68<br><br>"+
+        "<u><b>8ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 8ª Ch AC</u>: 799,44<br><br>"+
+        "<u><b>9ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 9ª Ch AC</u>: 797,82<br><br>"+
+        "<u><b>10ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 10ª Ch AC</u>: 797,50...<br>"+
+        "<br>Nota final de Corte: 797,22 AC"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 813.1"
+    },
+ { 
         nome: 'FURG', 
-        notaCorte: 803.23, 
+        notaCorte: 799.08, 
         vagas: 40,
         pesos: { redacao: 3, natureza: 2, humanidades: 2, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 2, 2, 1, 3],
-        somapesos: 3+2+2+2+1
+        pesos_numeros: [2, 2, 2, 1, 3],//não esquecer de colocar os pesos na ordem L H N M R
+        somapesos: 3 + 2 + 2 + 2 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 803.23<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 10 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 802,18<br><br>"+
+        "<u><b>3ª Ch. AC:</u></b> 2 candidatos<br>"+
+        "Corte 3ª Ch AC: 802,09<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 799,08"
     },
     { 
         nome: 'UEFS', 
-        notaCorte: 786.80, 
+        notaCorte: 776.41, 
         vagas: 15,
         pesos: { redacao: 4, natureza: 5, humanidades: 3, linguagens: 5, matematica: 3 },
-        pesos_numeros: [5, 3, 5, 3, 4],
-        somapesos: 4+5+3+5+3
+        pesos_numeros: [5, 3, 5, 3, 4],//não esquecer de colocar os pesos na ordem L H N M R
+        somapesos: 5+3+4+4+3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 15 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 780,21<br><br>"+
+        "<u><b>Outras chamadas:<br></b></u>"+
+        "Foi até a 5ª. Não encontrado o número de candidatos<br><br>"+
+        "Corte final: 777.46<br>"+
+        "<br><u><b>Chamadas finalizadas</u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 776.41"
     },
     { 
         nome: 'UEM', 
-        notaCorte: 813.78, 
+        notaCorte: 822.62, 
         vagas: 4,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1+1+1+1+1
+        pesos_numeros: [1, 1, 1, 1, 1],//não esquecer de colocar os pesos na ordem L H N M R
+        somapesos: 1+1+1+1+1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 4 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 813,78<br><br>"+
+        "<u><b>Outras chamadas:<br></b></u>"+
+        "Foi até a 3ª. Não encontrado o número de candidatos<br><br>"+
+        "Corte final: 798,92 - Candidata havia ficado em 9º na classificação e ficou em 2ª na Lista de Espera.<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 822,62"
     },
     { 
         nome: 'UEMG', 
-        notaCorte: 795.24, 
+        notaCorte: 797.56, 
         vagas: 11,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1+1+1+1+1
+        pesos_numeros: [1, 1, 1, 1, 1],//não esquecer de colocar os pesos na ordem L H N M R
+        somapesos: 1+1+1+1+1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 11 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 795,24<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 7 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 792,72<br><br>"+
+        "<u><b>3ª Ch. AC:</u></b> 1 candidato<br>"+
+        "Corte 3ª Ch AC: 792,28<br><br>"+
+        "<u><b>4ª Ch. AC:</u></b> 1 candidato<br>"+
+        "Corte 4ª Ch AC: 792,14<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 797,56"
     },
     { 
         nome: 'UEMS', 
-        notaCorte: 826.28,
+        notaCorte: 811.65,
         vagas: 13,
-        pesos: { redacao: 2, natureza: 3, humanidades: 4, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 4, 3, 1, 2],//não esquecer de colocar os pesos na ordem L H N M R
-        somapesos: 3+4+1+1+2
+        pesos: { redacao: 3, natureza: 4, humanidades: 1, linguagens: 1, matematica: 2 },
+        pesos_numeros: [3, 1, 4, 2, 1],//não esquecer de colocar os pesos na ordem L H N M R
+        somapesos: 3+4+1+1+2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 13 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 826.28<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 2 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 825,84<br><br>"+
+        "<u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 811,65"
     },
     {
-        nome: 'UERN',
-        notaCorte: 874.50,
+        nome: 'UERN (Mossoró) *BONIFICAÇÃO',
+        notaCorte: 785.23,
         vagas: 26,
         pesos: { redacao: 3, natureza: 3, humanidades: 1, linguagens: 3, matematica: 1 },
         pesos_numeros: [3, 1, 3, 1, 3],  // Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
-        somapesos: 3 + 3 + 1 + 3 + 1
+        somapesos: 3 + 3 + 1 + 3 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 26 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 874.50<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 873,94<br><br>"+
+        "<u><b>Chamadas finalizadas</b></u><br>"+
+        "Não peguei as notas SEM bonificação<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 785,23"
     },
     {
         nome: 'UESB - Jequié',
-        notaCorte: 796.47,
+        notaCorte: 787.23,
         vagas: 6,
         pesos: { redacao: 5, natureza: 4, humanidades: 2, linguagens: 5, matematica: 2 },
-        pesos_numeros: [5, 2, 4, 2, 5],
-        somapesos: 5 + 4 + 2 + 5 + 2
+        pesos_numeros: [5, 2, 4, 2, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 5 + 4 + 2 + 5 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787.23"
     },
     {
         nome: 'UESB - Vitória da C.',
-        notaCorte: 798.28,
+        notaCorte: 786.01,
         vagas: 7,
         pesos: { redacao: 5, natureza: 4, humanidades: 2, linguagens: 5, matematica: 2 },
-        pesos_numeros: [5, 2, 4, 2, 5],
-        somapesos: 5 + 4 + 2 + 5 + 2
+        pesos_numeros: [5, 2, 4, 2, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 5 + 4 + 2 + 5 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 7 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 798.28<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> Não encontrado<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 786,01"
     },
     {
         nome: 'UESC',
-        notaCorte: 792.82,
+        notaCorte:785.9,
         vagas: 20,
-        pesos: { redacao: 5, natureza: 4, humanidades: 3, linguagens: 5, matematica: 2 },
-        pesos_numeros: [5, 3, 4, 2, 5],
-        somapesos: 5 + 4 + 3 + 5 + 2
+        pesos: { redacao: 5, natureza: 4, humanidades: 2, linguagens: 5, matematica: 2 },
+        pesos_numeros: [5, 2, 4, 2, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 5 + 2 + 3 + 2 + 5,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 20 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 792.82<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> Não encontrado<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 785,9"
     },
     {
-        nome: 'UESPI',
-        notaCorte: 790.40,
-        vagas: 12,
+        nome: 'UESPI - Eram 2 SISUS',
+        notaCorte: 789.35,
+        vagas: 24,
         pesos: { redacao: 3, natureza: 5, humanidades: 2, linguagens: 5, matematica: 3 },
-        pesos_numeros: [5, 2, 5, 3, 3],
-        somapesos: 3 + 5 + 2 + 5 + 3
+        pesos_numeros: [5, 2, 5, 3, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 5 + 2 + 5 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 24 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 790,40<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 2 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 789,37<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 789.35"
     },
     {
         nome: 'UFAC',
         notaCorte: 857.98,
         vagas: 38,
         pesos: { redacao: 2, natureza: 3, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 1, 3, 1, 2],
-        somapesos: 2 + 3 + 1 + 2 + 1
+        pesos_numeros: [2, 1, 3, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 3 + 1 + 2 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 857.98"
     },
     {
-        nome: 'UFAL - Arapiraca',
-        notaCorte: 848.50,
+        nome: 'UFAL - Arapiraca - Com Bonificação',
+        notaCorte: 786.36,
         vagas: 30,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
         pesos_numeros: [1, 1, 1, 1, 1],  // Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
-        somapesos: 1 + 1 + 1 + 1 + 1
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 30 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 773,50<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 771,78<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 786,36"
     },
     {
         nome: 'UFAL - Maceió',
-        notaCorte: 806.06,
+        notaCorte: 788.1,
         vagas: 50,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 788.1"
     },
     {
-        nome: 'UFAM',
-        notaCorte: 926.63,
+        nome: 'UFAM *BONIFICAÇÃO',
+        notaCorte: 775.99,
         vagas: 25,
         pesos: { redacao: 2, natureza: 2, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 1, 2, 1, 2],
-        somapesos: 2 + 2 + 1 + 2 + 1
+        pesos_numeros: [2, 1, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 1 + 2 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 25 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 926.63<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 8 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 921,23<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "Não peguei as notas SEM bonificação<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 775,99"
     },
     {
-        nome: 'UFBA - Salvador',
-        notaCorte: 792.57,
+        nome: 'UFBA - Salvador - 2 SISUs',
+        notaCorte: 781.18,
         vagas: 46,
         pesos: { redacao: 3, natureza: 4, humanidades: 3, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 3, 4, 2, 3],
-        somapesos: 3 + 4 + 3 + 3 + 2
+        pesos_numeros: [3, 3, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 4 + 3 + 3 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 46 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 792.57<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 9 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 784,57<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 781,18"
     },
     {
         nome: 'UFBA - VCA',
-        notaCorte: 938.25,
+        notaCorte:776.02,
         vagas: 15,
         pesos: { redacao: 3, natureza: 4, humanidades: 3, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 3, 4, 2, 3],
-        somapesos: 3 + 4 + 3 + 3 + 2
+        pesos_numeros: [3, 3, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 4 + 3 + 3 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 15 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 938.25<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 935,38<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 776,02"
     },
     {
         nome: 'UFC - Fortaleza',
-        notaCorte: 804.76,
+        notaCorte: 803.22,
         vagas: 80,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 80 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 804.76<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 7 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 802<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 803,22"
     },
     {
         nome: 'UFC - Sobral',
-        notaCorte: 801.32,
+        notaCorte: 798,
         vagas: 40,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas:  "<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 801.32<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 798,22<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 798"
     },
     {
         nome: 'UFCA',
-        notaCorte: 791.62,
+        notaCorte: 781.14,
         vagas: 40,
-        pesos: { redacao: 4, natureza: 6, humanidades: 3, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 3, 6, 3, 4],  // Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
-        somapesos: 4 + 6 + 3 + 4 + 3
+        pesos: { redacao: 2, natureza: 3, humanidades: 1.5, linguagens: 2, matematica: 1.5 },
+        pesos_numeros: [2, 1.5, 3, 1.5, 1],  // Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2+1.5+3+1.5+1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791.62<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> Quantidade de candidatos não encontrado<br>"+
+        "Corte 2ª Ch AC</u>: 790.35<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 781,14"
     },
     {
         nome: 'UFCAT',
-        notaCorte: 792.57,
+        notaCorte: 781.17,
         vagas: 13,
         pesos: { redacao: 4, natureza: 6, humanidades: 3, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 3, 6, 3, 4],
-        somapesos: 4 + 6 + 3 + 4 + 3
+        pesos_numeros: [4, 3, 6, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 6 + 3 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791.62<br>"+
+        "<br><u><b>Outras chamadas não encontradas</b></u><br>"
     },
     {
         nome: 'UFCG - Cajazeiras',
-        notaCorte: 869.57,
+        notaCorte: 787,
         vagas: 13,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 13 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 869.57<br><br>"+
+        "<br><u><b>Outras chamadas não encontradas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787"
     },
     {
         nome: 'UFCG - Campina Grande',
-        notaCorte: 832.73,
+        notaCorte: 792.76,
         vagas: 45,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 45 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 832.73<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 832,71<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 792,76"
     },
     {
         nome: 'UFCSPA',
-        notaCorte: 805.66,
+        notaCorte: 801.68,
         vagas: 50,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 50 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 805.66<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> Não encontrado o nº de candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 796,06<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 801,68"
     },
     {
         nome: 'UFDPAR',
-        notaCorte: 791.44,
+        notaCorte: 782.94,
         vagas: 39,
         pesos: { redacao: 3, natureza: 5, humanidades: 2, linguagens: 5, matematica: 4 },
-        pesos_numeros: [3, 2, 5, 4, 5],
-        somapesos: 3 + 5 + 2 + 5 + 4
+        pesos_numeros: [3, 2, 5, 4, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 5 + 2 + 5 + 4,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 39 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791,44<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 791,12<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 782,94"
     },
     {
         nome: 'UFERSA',
-        notaCorte: 775.96,
+        notaCorte: 765.74,
         vagas: 22,
         pesos: { redacao: 3, natureza: 7, humanidades: 4, linguagens: 4, matematica: 2 },
-        pesos_numeros: [3, 4, 7, 2, 4],
-        somapesos: 3 + 7 + 4 + 4 + 2
+        pesos_numeros: [3, 4, 7, 2, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 7 + 4 + 4 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 765.74"
     },
     {
-        nome: 'UFES',
-        notaCorte: 807.98,
+        nome: 'UFES - 2 SISUs',
+        notaCorte: 807.82,
         vagas: 40,
         pesos: { redacao: 4, natureza: 4, humanidades: 2, linguagens: 3, matematica: 2 },
-        pesos_numeros: [4, 2, 4, 2, 3],
-        somapesos: 4 + 4 + 2 + 3 + 2
+        pesos_numeros: [4, 2, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 4 + 2 + 3 + 2,
+        chamadas:"<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 807.98<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 806,36<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 807,8"
     },
     {
         nome: 'UFF',
-        notaCorte: 812.55,
+        notaCorte: 804.17,
         vagas: 90,
         pesos: { redacao: 3, natureza: 3, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [3, 1, 3, 1, 2],
-        somapesos: 3 + 3 + 1 + 2 + 1
+        pesos_numeros: [3, 1, 3, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 1 + 2 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 90 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 812,55<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 4 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 812,11<br>"+
+        "<u><b>3ª Ch. AC:</u></b> 2 candidatos<br>"+
+        "Corte 3ª Ch AC</u>: 811,78<br>"+
+        "<u><b>4ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 5ª Ch AC</u>: 811,37<br>"+
+        "<u><b>5ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 5ª Ch AC</u>: 811,23<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 804,17"
     },
     {
         nome: 'UFFS - Chapecó',
-        notaCorte: 797.82,
+        notaCorte: 791.92,
         vagas: 5,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 791.92"
     },
     {
-        nome: 'UFFS - Passo Fundo',
-        notaCorte: 793.04,
+        nome: 'UFFS - Passo Fundo Aranguá',
+        notaCorte: 793.98,
         vagas: 5,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 793,98"
     },
     {
         nome: 'UFG',
-        notaCorte: 805.10,
+        notaCorte: 796.07,
         vagas: 55,
         pesos: { redacao: 4, natureza: 6, humanidades: 3, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 3, 6, 3, 4],
-        somapesos: 4 + 6 + 3 + 4 + 3
+        pesos_numeros: [4, 3, 6, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 6 + 3 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 55 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 805.10<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 10 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 802,31<br>"+
+        "<u><b>3ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 3ª Ch AC</u>: 802,22<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 796,07"
     },
     {
         nome: 'UFGD',
-        notaCorte: 795.48,
-        vagas: 9,
+        notaCorte: 795.82,
+        vagas: 19,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 795,82"
     },
     {
         nome: 'UFJ',
-        notaCorte: 790.80,
+        notaCorte: 783.45,
         vagas: 30,
         pesos: { redacao: 4, natureza: 6, humanidades: 3, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 3, 6, 3, 4],
-        somapesos: 4 + 6 + 3 + 4 + 3
+        pesos_numeros: [4, 3, 6, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 6 + 3 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 30 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 790,8<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 790,77<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 783,45"
     },
     {
         nome: 'UFJF - Gov Valadares',
-        notaCorte: 795.00,
+        notaCorte: 792.94,
         vagas: 25,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 792,94"
     },
     {
         nome: 'UFJF - Juiz de Fora',
-        notaCorte: 801.56,
+        notaCorte: 800.86,
         vagas: 45,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 800.8"
     },
     {
         nome: 'UFLA',
-        notaCorte: 797.90,
+        notaCorte: 796.5,
         vagas: 21,
         pesos: { redacao: 2, natureza: 2, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [2, 2, 2, 2, 2],
-        somapesos: 2 + 2 + 2 + 2 + 2
+        pesos_numeros: [2, 2, 2, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 2 + 2 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 796,5"
     },
     {
         nome: 'UFMA - Imperatriz',
-        notaCorte: 840.33,
+        notaCorte: 780.34,
         vagas: 40,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 780,34"
     },
     {
         nome: 'UFMA - Pinheiro',
-        notaCorte: 898.51,
+        notaCorte: 778.54,
         vagas: 50,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 778,54"
     },
     {
         nome: 'UFMA- São Luís',
-        notaCorte: 831.50,
+        notaCorte: 794.56,
         vagas: 50,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 50 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791.90<br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 789,98<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 794,56"
     },
-    {
-        nome: 'UFMG',
-        notaCorte: 812.80,
-        vagas: 160,
-        pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
-    },
+   
     {
         nome: 'UFMS - Campo Grande',
-        notaCorte: 807.75,
+        notaCorte: 795.22,
         vagas: 3,
         pesos: { redacao: 2, natureza: 3, humanidades: 2, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 2, 3, 1, 2],
-        somapesos: 2 + 3 + 2 + 2 + 1
+        pesos_numeros: [2, 2, 3, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 3 + 2 + 2 + 1,
+        chamadas:  "<br><u><b>Ch. Regular AC:</u></b> 3 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 807.75 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 790,14<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 795.22"
     },
     {
         nome: 'UFMS - Três Lagoas',
-        notaCorte: 794.42,
+        notaCorte: 771.32,
         vagas: 1,
         pesos: { redacao: 2, natureza: 3, humanidades: 2, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 2, 3, 1, 2],
-        somapesos: 2 + 3 + 2 + 2 + 1
+        pesos_numeros: [2, 2, 3, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 3 + 2 + 2 + 1,
+        chamadas: "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 771,32"
     },
     {
         nome: 'UFMT - Cuiabá',
-        notaCorte: 900.66,
+        notaCorte: 786.66,
         vagas: 40,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 40 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 783.26 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 777,12<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 786.66"
     },
     {
         nome: 'UFMT - Sinop',
-        notaCorte: 891.25,
+        notaCorte: 781.66,
         vagas: 30,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 30 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 775 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 773,98<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 781.66"
     },
     {
         nome: 'UFNT',
-        notaCorte: 797.83,
+        notaCorte: 777.39,
         vagas: 1,
         pesos: { redacao: 3, natureza: 4, humanidades: 2, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 2, 4, 2, 3],
-        somapesos: 3 + 4 + 2 + 3 + 2
+        pesos_numeros: [3, 2, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 4 + 2 + 3 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"
+        +"<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 777,39"
     },
     {
         nome: 'UFOB',
-        notaCorte: 800.06,
+        notaCorte: 784.58,
         vagas: 12,
         pesos: { redacao: 5, natureza: 5, humanidades: 2, linguagens: 4, matematica: 2 },
-        pesos_numeros: [5, 2, 5, 2, 4],
-        somapesos: 5 + 5 + 2 + 4 + 2
+        pesos_numeros: [5, 2, 5, 2, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 5 + 5 + 2 + 4 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 784,58"
     },
     {
         nome: 'UFOP',
-        notaCorte: 813.73,
+        notaCorte: 808.23,
         vagas: 40,
         pesos: { redacao: 2, natureza: 2, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [2, 1, 2, 1, 1],
-        somapesos: 2 + 2 + 1 + 1 + 1
+        pesos_numeros: [2, 1, 2, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 808,23"
     },
     {
-        nome: 'UFPB',
-        notaCorte: 875.82,
+        nome: 'UFPB com Bonificação',
+        notaCorte: 796.08,
         vagas: 65,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 796,08"
     },
     {
         nome: 'UFPE - Caruaru',
-        notaCorte: 862.30,
+        notaCorte: 791.34,
         vagas: 40,
         pesos: { redacao: 5, natureza: 5, humanidades: 4, linguagens: 3, matematica: 3 },
-        pesos_numeros: [5, 4, 5, 3, 3],
-        somapesos: 5 + 5 + 4 + 3 + 3
+        pesos_numeros: [5, 4, 5, 3, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 5 + 5 + 4 + 3 + 3,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 791,34"
     },
     {
-        nome: 'UFPE - Recife',
-        notaCorte: 828.31,
+        nome: 'UFPE - Recife*',// AS NOTAS DA CARTILHA NAO BATEM COM AS DO PESO.
+        notaCorte: 793.59,
         vagas: 70,
         pesos: { redacao: 2, natureza: 3, humanidades: 1, linguagens: 2, matematica: 2 },
-        pesos_numeros: [2, 1, 3, 2, 2],
-        somapesos: 2 + 3 + 1 + 2 + 2
+        pesos_numeros: [2, 1, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 3 + 1 + 2 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 70 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 788,87 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 6 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 787,49<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 793,59"
     },
     {
         nome: 'UFPEL',
-        notaCorte: 797.04,
+        notaCorte: 792.78,
         vagas: 40,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 70 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 797.04 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 8 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 796,10<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 792,78"
     },
     {
         nome: 'UFPI - Picos',
-        notaCorte: 788.93,
+        notaCorte: 777.09,
         vagas: 12,
         pesos: { redacao: 3, natureza: 5, humanidades: 2, linguagens: 5, matematica: 4 },
-        pesos_numeros: [3, 2, 5, 4, 5],
-        somapesos: 3 + 5 + 2 + 5 + 4
+        pesos_numeros: [3, 2, 5, 4, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 5 + 2 + 5 + 4,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 12 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 788.93 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 788,84<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 777,09"
     },
     {
         nome: 'UFPI - Teresina',
-        notaCorte: 805.65,
+        notaCorte: 802.14,
         vagas: 39,
         pesos: { redacao: 3, natureza: 5, humanidades: 2, linguagens: 5, matematica: 4 },
-        pesos_numeros: [3, 2, 5, 4, 5],
-        somapesos: 3 + 5 + 2 + 5 + 4
+        pesos_numeros: [3, 2, 5, 4, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 5 + 2 + 5 + 4,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 39 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 805.65 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 798,75<br>"+
+        "<u><b>3ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 3ª Ch AC</u>: 792,85<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 802,14"
     },
     {
         nome: 'UFPR - Curitiba',
-        notaCorte: 814.64,
+        notaCorte: 812.1,
         vagas: 19,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado" +
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 812,1"
     },
     {
         nome: 'UFPR - Toledo',
-        notaCorte: 807.32,
+        notaCorte: 805.24,
         vagas: 3,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado"+
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 805,24"
     },
-    {
-        nome: 'UFR',
-        notaCorte: 896.86,
-        vagas: 20,
-        pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
-    },
+
     {
         nome: 'UFRB',
-        notaCorte: 791.82,
+        notaCorte: 784.36,
         vagas: 25,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 784,36"
     },
     {
         nome: 'UFRGS',
-        notaCorte: 793.23,
+        notaCorte: 787.27,
         vagas: 21,
         pesos: { redacao: 2, natureza: 2, humanidades: 2, linguagens: 3, matematica: 1 },
-        pesos_numeros: [2, 2, 2, 1, 3],
-        somapesos: 2 + 2 + 2 + 3 + 1
+        pesos_numeros: [2, 2, 2, 1, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 2 + 3 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 21 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 793.23 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 2 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 789,81<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787,27"
     },
     {
         nome: 'UFRJ - Macaé',
-        notaCorte: 817.79,
+        notaCorte: 806.8,
         vagas: 30,
         pesos: { redacao: 3, natureza: 2, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [3, 1, 2, 1, 2],
-        somapesos: 3 + 2 + 1 + 2 + 1
+        pesos_numeros: [3, 1, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 2 + 1 + 2 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 806,8"
     },
     {
         nome: 'UFRJ - Rio de Janeiro',
-        notaCorte: 831.87,
+        notaCorte: 824.22,
         vagas: 100,
         pesos: { redacao: 4, natureza: 4, humanidades: 1, linguagens: 2, matematica: 2 },
-        pesos_numeros: [4, 1, 4, 2, 2],
-        somapesos: 4 + 4 + 1 + 2 + 2
+        pesos_numeros: [4, 1, 4, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 4 + 1 + 2 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 100 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 831,87 <br><br>"+
+        "<u><b>2ª,3ª,4ª... Ch. AC:</u></b> 49 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 818,28<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 824.22"
     },
     {
-        nome: 'UFRN - Caicó',
-        notaCorte: 927.63,
+        nome: 'UFRN - Caicó *BONIFICAÇÃO',
+        notaCorte: 773.26,
         vagas: 19,
         pesos: { redacao: 3, natureza: 6, humanidades: 3, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 3, 6, 2, 3],
-        somapesos: 3 + 6 + 3 + 3 + 2
+        pesos_numeros: [3, 3, 6, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 6 + 3 + 3 + 2,
+        chamadas:  "<br><u><b>Ch. Regular AC:</u></b> 19 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 927,63 COM BÔNUS e 773,02 SEM BÔNUS <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 925,89 COM BÔNUS e 771,58 SEM BÔNUS<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 773,26"
     },
     {
         nome: 'UFRN - Natal',
-        notaCorte: 867.83,
+        notaCorte: 782.87,
         vagas: 49,
         pesos: { redacao: 3, natureza: 6, humanidades: 3, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 3, 6, 2, 3],
-        somapesos: 3 + 6 + 3 + 3 + 2
+        pesos_numeros: [3, 3, 6, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 6 + 3 + 3 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 782,87"
     },
     {
         nome: 'UFRR',
-        notaCorte: 789.59,
+        notaCorte: 774.66,
         vagas: 4,
         pesos: { redacao: 1, natureza: 3, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 3, 1, 1],
-        somapesos: 1 + 3 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 3, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 3 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 774,66"
     },
     {
-        nome: 'UFS - Aracaju',
-        notaCorte: 798.45,
+        nome: 'UFS - Aracaju *BONIFICAÇÃO',
+        notaCorte: 787.44,
         vagas: 49,
         pesos: { redacao: 4, natureza: 7, humanidades: 2, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 2, 7, 3, 4],
-        somapesos: 4 + 7 + 2 + 4 + 3
+        pesos_numeros: [4, 2, 7, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 7 + 2 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 49 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 798,45 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 795,74 COM BÔNUS e 771,58 SEM BÔNUS<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787,44"
     },
     {
         nome: 'UFS - Lagarto',
-        notaCorte: 792.70,
+        notaCorte: 783.61,
         vagas: 28,
         pesos: { redacao: 4, natureza: 7, humanidades: 2, linguagens: 4, matematica: 3 },
-        pesos_numeros: [4, 2, 7, 3, 4],
-        somapesos: 4 + 7 + 2 + 4 + 3
+        pesos_numeros: [4, 2, 7, 3, 4],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 4 + 7 + 2 + 4 + 3,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 28 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 792,70 <br><br>"+
+        "<u><b>2ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 792,45<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 783,61"
     },
     {
         nome: 'UFSB',
-        notaCorte: 885.74,
+        notaCorte: 801.5,
         vagas: 7,
         pesos: { redacao: 5, natureza: 5, humanidades: 2, linguagens: 3, matematica: 4 },
-        pesos_numeros: [5, 2, 5, 4, 3],
-        somapesos: 5 + 5 + 2 + 3 + 4
+        pesos_numeros: [3, 2, 5, 4, 5],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 2 + 5 + 4 + 5,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+         "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 801,5"
     },
     {
         nome: 'UFSC - Araranguá',
-        notaCorte: 817.27,
+        notaCorte: 807.73,
         vagas: 7,
         pesos: { redacao: 3, natureza: 2, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 2, 2, 2],
-        somapesos: 3 + 2 + 2 + 2 + 2
+        pesos_numeros: [3, 2, 2, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 2 + 2 + 2 + 2,
+        chamadas:  "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 807,73"
     },
     {
         nome: 'UFSC - Florianópolis',
-        notaCorte: 823.84,
+        notaCorte: 820.98,
         vagas: 13,
         pesos: { redacao: 3, natureza: 2, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 2, 2, 2],
-        somapesos: 3 + 2 + 2 + 2 + 2
+        pesos_numeros: [3, 2, 2, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 2 + 2 + 2 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 13 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 823,84 <br><br>"+
+        "<u><b>2ª/3ª/4ª/5ª Ch. AC:</u></b> 4 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 817,58<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 820,98"
     },
     {
         nome: 'UFSCar',
-        notaCorte: 812.23,
+        notaCorte: 805.71,
         vagas: 22,
         pesos: { redacao: 2, natureza: 2, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 1, 2, 1, 2],
-        somapesos: 2 + 2 + 1 + 2 + 1
+        pesos_numeros: [2, 1, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 1 + 2 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 22 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 812,23 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> ? candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 799,65<br>"+
+        "RODOU MUITO"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 805,71"
     },
     {
         nome: 'UFSJ - Divinópolis',
-        notaCorte: 795.86,
+        notaCorte: 789.6,
         vagas: 30,
         pesos: { redacao: 2, natureza: 2, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 1, 2, 1, 2],
-        somapesos: 2 + 2 + 1 + 2 + 1
+        pesos_numeros: [2, 1, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 1 + 2 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 789,6"
     },
     {
         nome: 'UFSJ - São João del Rei',
-        notaCorte: 796.09,
+        notaCorte: 784.49,
         vagas: 20,
         pesos: { redacao: 2, natureza: 2, humanidades: 1, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 1, 2, 1, 2],
-        somapesos: 2 + 2 + 1 + 2 + 1
+        pesos_numeros: [2, 1, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 1 + 2 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 784,49"
     },
     {
         nome: 'UFSM',
-        notaCorte: 800.76,
+        notaCorte: 795.64,
         vagas: 42,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 795,64"
     },
     {
         nome: 'UFT',
-        notaCorte: 795.35,
+        notaCorte: 789.84,
         vagas: 5,
         pesos: { redacao: 3, natureza: 4, humanidades: 2, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 2, 4, 2, 3],
-        somapesos: 3 + 4 + 2 + 3 + 2
+        pesos_numeros: [3, 2, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 4 + 2 + 3 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 789,84"
     },
     {
         nome: 'UFTM',
-        notaCorte: 823.26,
-        vagas: 25,
+        notaCorte: 819.75,
+        vagas: 22,
         pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 3 },
-        pesos_numeros: [3, 2, 3, 3, 2],
-        somapesos: 3 + 3 + 2 + 2 + 3
+        pesos_numeros: [3, 2, 3, 3, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 2 + 2 + 3,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 819,75"
     },
     {
         nome: 'UFU',
-        notaCorte: 803.22,
+        notaCorte: 795.58,
         vagas: 30,
         pesos: { redacao: 1, natureza: 2, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 2, 1, 1],
-        somapesos: 1 + 2 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 2, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 2 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 30 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 803.22 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 13 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 796,88<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 795,58"
     },
     {
         nome: 'UFV',
-        notaCorte: 801.08,
+        notaCorte: 796.68,
         vagas: 25,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 796,68"
     },
     {
         nome: 'UFVJM - Diamantina',
-        notaCorte: 803.55,
+        notaCorte: 795.39,
         vagas: 22,
         pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 2],
-        somapesos: 3 + 3 + 2 + 2 + 2
+        pesos_numeros: [3, 2, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 2 + 2 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 795,39"
     },
     {
         nome: 'UFVJM - Teófilo Otoni',
-        notaCorte: 800.73,
+        notaCorte: 796.59,
         vagas: 22,
         pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 2],
-        somapesos: 3 + 3 + 2 + 2 + 2
+        pesos_numeros: [3, 2, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 2 + 2 + 2,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 796,59"
     },
     {
         nome: 'UNCISAL',
         notaCorte: 813.96,
         vagas: 25,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 813,96"
     },
-    {
-        nome: 'UNDF',
-        notaCorte: 793.32,
-        vagas: 48,
-        pesos: { redacao: 2, natureza: 4, humanidades: 2, linguagens: 4, matematica: 3 },
-        pesos_numeros: [2, 2, 4, 3, 4],
-        somapesos: 2 + 4 + 2 + 4 + 3
-    },
-    {
+     {
         nome: 'UNEMAT',
-        notaCorte: 781.68,
+        notaCorte: 781.77,
         vagas: 12,
         pesos: { redacao: 3, natureza: 4, humanidades: 3, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 3, 4, 2, 3],
-        somapesos: 3 + 4 + 3 + 3 + 2
+        pesos_numeros: [3, 3, 4, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 4 + 3 + 3 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 12 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 782,68 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 6 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 781,09<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 781,77"
     },
     {
         nome: 'Unifal',
-        notaCorte: 805.83,
+        notaCorte: 801.49,
         vagas: 30,
         pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 2],
-        somapesos: 3 + 3 + 2 + 2 + 2
+        pesos_numeros: [3, 2, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 2 + 2 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 30 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 805.83 <br><br>"+
+        "<u><b>2ª/3ª/4ª/5ª/6ª Ch. AC:</u></b> 12 candidatos<br>"+
+        "Corte 2ª Ch AC</u>: 804,34<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 801,49"
     },
     {
         nome: 'UNILA',
-        notaCorte: 793.42,
+        notaCorte: 792.68,
         vagas: 15,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 792,68"
     },
     {
         nome: 'UNIMONTES',
-        notaCorte: 786.78,
+        notaCorte: 788.27,
         vagas: 16,
         pesos: { redacao: 2, natureza: 2, humanidades: 2, linguagens: 2, matematica: 1 },
-        pesos_numeros: [2, 2, 2, 1, 2],
-        somapesos: 2 + 2 + 2 + 2 + 1
+        pesos_numeros: [2, 2, 2, 1, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 2 + 2 + 2 + 2 + 1,
+        chamadas: "As informações disponibilizadas pelo inep não batem com as das cartilhas das turmas.<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 788,27"
     },
-    {
-        nome: 'UNIOESTE - Cascavel',
-        notaCorte: 812.63,
-        vagas: 10,
-        pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 2],
-        somapesos: 3 + 3 + 2 + 2 + 2
-    },
-    {
-        nome: 'UNIOESTE - FB',
-        notaCorte: 806.45,
-        vagas: 10,
-        pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 2],
-        somapesos: 3 + 3 + 2 + 2 + 2
-    },
+    // {
+    //     nome: 'UNIOESTE - Cascavel',
+    //     notaCorte: 796.67,
+    //     vagas: 10,
+    //     pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
+    //     pesos_numeros: [3, 2, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+    //     somapesos: 3 + 3 + 2 + 2 + 2,
+    //     chamadas: "<br><u><b>Ch. Regular AC:</u></b> 10 candidatos<br>"+
+    //     "Corte Ch Regular AC</u>: 812,63 <br><br>"+
+    //     "<u><b>2ª Ch. AC:</u></b> 2 candidatos<br>"+
+    //     "Corte 2ª Ch AC</u>: 796,67<br>"+
+    //     "<br><u><b>Chamadas finalizadas</b></u><br>"
+    //     //"<br><b>PARCIAIS SISU 2025:</b><br>"+
+    //     //"Corte 1ª Parcial = XXX"
+    // },
+    // {
+    //     nome: 'UNIOESTE - FB',
+    //     notaCorte: 801.74,
+    //     vagas: 10,
+    //     pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 2, matematica: 2 },
+    //     pesos_numeros: [3, 2, 3, 2, 2],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+    //     somapesos: 3 + 3 + 2 + 2 + 2,
+    //     chamadas: "<br><u><b>Ch. Regular AC:</u></b> 10 candidatos<br>"+
+    //     "Corte Ch Regular AC</u>: 806,45 <br><br>"+
+    //     "<u><b>4ª Ch. AC:</u></b> 2 candidatos<br>"+
+    //     "Corte 4ª Ch AC</u>: 801,74<br>"+
+    //     "<br><u><b>Chamadas finalizadas</b></u><br>"
+    //     //"<br><b>PARCIAIS SISU 2025:</b><br>"+
+    //     //"Corte 1ª Parcial = XXX"
+    // },
     {
         nome: 'UNIPAMPA',
-        notaCorte: 791.20,
+        notaCorte: 788.84,
         vagas: 28,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas:"<br><u><b>Ch. Regular AC:</u></b> 28 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791.20 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 7 candidatos<br>"+
+        "Corte 2ª/3ª Ch. AC:</u>: 789,9<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 788,84"
     },
     {
         nome: 'UNIRIO',
-        notaCorte: 797.25,
+        notaCorte: 790.95,
         vagas: 70,
         pesos: { redacao: 3, natureza: 3, humanidades: 2, linguagens: 3, matematica: 2 },
-        pesos_numeros: [3, 2, 3, 2, 3],
-        somapesos: 3 + 3 + 2 + 3 + 2
+        pesos_numeros: [3, 2, 3, 2, 3],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 3 + 3 + 2 + 3 + 2,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 28 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 791,20 <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 5 candidatos<br>"+
+        "Corte 2ª/3ª Ch. AC:</u>: 796,65<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 790,95"
     },
     {
         nome: 'UNIVASF - Paulo Afonso',
-        notaCorte: 859.94,
+        notaCorte: 781.06,
         vagas: 5,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<strong>Outras chamadas:</strong> Não encontrado<br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 781,06"
     },
     {
-        nome: 'UNIVASF - Petrolina',
-        notaCorte: 860.33,
+        nome: 'UNIVASF - Petrolina COM BONIFICAÇÃO',
+        notaCorte: 780.1,
         vagas: 21,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 28 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 860.33 COM BONIFICAÇÃO e 782,12 SEM BONIFICAÇÃO <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª/3ª Ch. AC:</u>: 858,42 COM BONIFICAÇÃO e 780,36 SEM BONIFICAÇÃO<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 780,1"
     },
     {
-        nome: 'UPE - Garanhuns',
-        notaCorte: 848.83,
+        nome: 'UPE - Garanhuns *BONIFICAÇÃO',
+        notaCorte: 782.98,
         vagas: 12,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 12 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 848.83, COM BONIFICAÇÃO e 771,66 SEM BONIFICAÇÃO <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 1 candidatos<br>"+
+        "Corte 2ª/3ª Ch. AC:</u>: 848,80 COM BONIFICAÇÃO e 771,46 SEM BONIFICAÇÃO"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 782,98"
     },
     {
-        nome: 'UPE - Recife',
-        notaCorte: 860.07,
+        nome: 'UPE - Recife *BONIFICAÇÃO',
+        notaCorte: 787.98,
         vagas: 45,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 46 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 860.07, COM BONIFICAÇÃO e 781,88 SEM BONIFICAÇÃO <br><br>"+
+        "<u><b>2ª/3ª Ch. AC:</u></b> 3 candidatos<br>"+
+        "Corte 2ª/3ª Ch. AC:</u>: 858,42 COM BONIFICAÇÃO e 780,38 SEM BONIFICAÇÃO<br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 787,98"
     },
     {
-        nome: 'UPE - Serra Talhada',
-        notaCorte: 857.12,
+        nome: 'UPE - Serra Talhada *BONIFICAÇÃO',
+        notaCorte: 775.92,
         vagas: 6,
         pesos: { redacao: 1, natureza: 1, humanidades: 1, linguagens: 1, matematica: 1 },
-        pesos_numeros: [1, 1, 1, 1, 1],
-        somapesos: 1 + 1 + 1 + 1 + 1
+        pesos_numeros: [1, 1, 1, 1, 1],// Ordem: L (Linguagens), H (Humanidades), N (Natureza), M (Matemática), R (Redação)
+        somapesos: 1 + 1 + 1 + 1 + 1,
+        chamadas: "<br><u><b>Ch. Regular AC:</u></b> 6 candidatos<br>"+
+        "Corte Ch Regular AC</u>: 857,12, COM BONIFICAÇÃO e 779,2 SEM BONIFICAÇÃO <br><br>"+
+        "<br><u><b>Chamadas finalizadas</b></u><br>"+
+        "<br><b>PARCIAIS SISU 2025:</b><br>"+
+        "Corte 1ª Parcial = 775,92"
     }
 
 ];
@@ -1038,14 +1547,14 @@ document.addEventListener("DOMContentLoaded", function() {
             // Define o conteúdo do item com detalhes formatados
             resultadoItem.innerHTML = `
                 <strong>${faculdade.nome}</strong><br>
-                Nota do Candidato: ${notaFinalPonderada.toFixed(2)}<br>
-                Nota de Corte: ${faculdade.notaCorte}<br>
+                Sua Nota: ${notaFinalPonderada.toFixed(2)}<br>
                 Vagas: ${faculdade.vagas}<br>
                 Pesos (L-H-N-M-R): ${faculdade.pesos_numeros.join(', ')}<br>
+                ${faculdade.chamadas}<br>
                 <strong class="${statusClass}">${statusAprovado ? 'APROVADO' : 'NÃO APROVADO'}</strong>
             `;
 
-            // Adiciona o item ao div de resultados
+            // Adiciona o item ao div de resultados ----  Nota de Corte Ch Regular: ${faculdade.notaCorte}<br>
             resultadoDiv.appendChild(resultadoItem);
         });
 
